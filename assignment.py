@@ -69,7 +69,7 @@ def insertion_sort_trace(data):
 def rank_students(records):
   n = len(records)
     if n != 0:
-        for i in range(1, n):
+        for i in range(1, len(records)):
             key = records[i][1]
             key_name = records[i][0]
             j = i - 1
