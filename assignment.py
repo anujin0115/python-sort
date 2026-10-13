@@ -27,11 +27,10 @@ def bubble_sort_trace(data):
                 data[j] = data[j + 1]
                 data[j + 1] = temp
                 swapped = True
-        traces.append(data)
+        traces.append(data.copy())
         if swapped == False:
             break
     return traces
-
 
 # Exercise 3
 def insertion_sort(data):
