@@ -3,8 +3,18 @@
 
 # Exercise 1
 def bubble_sort(data):
-    # Write your code here
-    pass
+    n = len(data)
+    for i in range(n):
+        swapped = False
+        for j in range(n - i - 1):
+            if data[j] > data[j + 1]:
+                temp = data[j]
+                data[j] = data[j + 1]
+                data[j + 1] = temp
+                swapped = True
+        if swapped == False:
+        break
+    return data
 
 # Exercise 2
 def bubble_sort_trace(data):
