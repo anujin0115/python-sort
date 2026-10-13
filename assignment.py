@@ -67,5 +67,20 @@ def insertion_sort_trace(data):
 
 # Exercise 5
 def rank_students(records):
-    # Write your code here
-    pass
+  n = len(records)
+    if n != 0:
+        for i in range(1, n):
+            key = records[i][1]
+            key_name = records[i][0]
+            j = i - 1
+            while j >= 0 and records[j][1] < key:
+                records[j+1][1] = records[j][1]
+                records[j + 1][0] = records[j][0]
+                j -= 1
+            records[j+1][1] = key
+            records[j + 1][0] = key_name
+
+
+        return records
+    else:
+        return records
