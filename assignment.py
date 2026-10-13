@@ -19,19 +19,23 @@ def bubble_sort(data):
 def bubble_sort_trace(data):
     n = len(data)
     traces = []
-    for i in range(n):
-        swapped = False
-        for j in range(n - i - 1):
-            if data[j] > data[j + 1]:
-                temp = data[j]
-                data[j] = data[j + 1]
-                data[j + 1] = temp
-                swapped = True
-        traces.append(data.copy())
-        if swapped == False:
-            break
-    traces.pop()
-    return traces
+    if n!=0 :
+        for i in range(n):
+            swapped = False
+            for j in range(n - i - 1):
+                if data[j] > data[j + 1]:
+                    temp = data[j]
+                    data[j] = data[j + 1]
+                    data[j + 1] = temp
+                    swapped = True
+
+            traces.append(data.copy())
+            if swapped == False:
+                break
+        traces.pop()
+        return traces
+    else:
+        return traces
 
 # Exercise 3
 def insertion_sort(data):
