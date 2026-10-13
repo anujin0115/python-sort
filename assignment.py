@@ -17,11 +17,6 @@ def bubble_sort(data):
     return data
 # Exercise 2
 def bubble_sort_trace(data):
-    # Write your code here
-    pass
-
-# Exercise 3
-def insertion_sort(data):
     n = len(data)
     traces = []
     for i in range(n):
@@ -32,10 +27,15 @@ def insertion_sort(data):
                 data[j] = data[j + 1]
                 data[j + 1] = temp
                 swapped = True
-                traces.append(data)
+        traces.append(data)
         if swapped == False:
             break
     return traces
+
+
+# Exercise 3
+def insertion_sort(data):
+
 
 # Exercise 4
 def insertion_sort_trace(data):
