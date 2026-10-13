@@ -27,7 +27,8 @@ def bubble_sort_trace(data):
                 data[j] = data[j + 1]
                 data[j + 1] = temp
                 swapped = True
-        traces.append(data.copy())
+        if  i>0:
+            traces.append(data.copy())
         if swapped == False:
             break
     return traces
