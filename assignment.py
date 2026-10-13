@@ -13,9 +13,8 @@ def bubble_sort(data):
                 data[j + 1] = temp
                 swapped = True
         if swapped == False:
-        break
+            break
     return data
-
 # Exercise 2
 def bubble_sort_trace(data):
     # Write your code here
